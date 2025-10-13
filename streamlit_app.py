@@ -64,10 +64,3 @@ st.number_input("Kilos (calculated)", value=float(round(kilos_calc, 3)), disable
 st.number_input("Pounds (calculated)", value=float(round(pounds_cal, 3)), disabled=True)
 st.number_input("Equiv Lug Calculate (25lb equivalent)", value=float(round(equiv_lug_calc, 3)), disabled=True)
 
-
-# Friendly hints
-##st.caption(
-##    "Notes: Size is typically the count per 25-lb lug (e.g., 48s). "
-##    "Equivalent lug ratio = Lug Weight ÷ Size. "
-##    "1 lb = 0.45359237 kg."
-##)
