@@ -4,14 +4,7 @@ import streamlit as st
 LB_TO_KG = 0.45359237
 
 st.set_page_config(page_title="WestPak Avocado Box Weight Calculator", layout="centered")
-st.markdown(
-    """
-    <div style="text-align: center;">
-        <img src="WPA.png" width="300">
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+#st.image("WPA.png", width = "200")
 st.title("WestPak Avocado Box Weight Calculator")
 
 st.markdown("Enter your inputs below. Calculated fields update when all required inputs are provided.")
