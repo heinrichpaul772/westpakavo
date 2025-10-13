@@ -4,7 +4,7 @@ import streamlit as st
 LB_TO_KG = 0.45359237
 
 st.set_page_config(page_title="WestPak Avocado Box Weight Calculator", layout="centered")
-#st.image("WPA.png", width = "200")
+st.image("WPA.png", width =200)
 st.title("WestPak Avocado Box Weight Calculator")
 
 st.markdown("Enter your inputs below. Calculated fields update when all required inputs are provided.")
@@ -63,8 +63,6 @@ equiv_lug_calc = (pounds_cal / 25)
 st.number_input("Kilos (calculated)", value=float(round(kilos_calc, 3)), disabled=True)
 st.number_input("Pounds (calculated)", value=float(round(pounds_cal, 3)), disabled=True)
 st.number_input("Equiv Lug Calculate (25lb equivalent)", value=float(round(equiv_lug_calc, 3)), disabled=True)
-
-
 
 
 # Friendly hints
