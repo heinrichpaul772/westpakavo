@@ -47,6 +47,21 @@ total_box_kg_bulk = total_box_lb_bulk * LB_TO_KG
 st.number_input("Total Box Weight (bulk fill) - Pounds (calculated)", value=float(round(total_box_lb_bulk, 3)), disabled=True)
 st.number_input("Total Box Weight (bulk fill) - Kilos (calculated)", value=float(round(total_box_kg_bulk, 3)), disabled=True)
 
+# --- Line 5 : Equivalent Lug Calculations
+st.markdown("Equivalent Lug Calculations. (Assuming sizes 28 - 70)")
+col1, col2, col3, col4, col5 = st.columns(5)
+
+kilo_box = col1.number_input("Kilo Box", min_value=0, step=1, format="%d")
+box_qnt = col2.number_input("Box Quantity", min_value=0, step=1, format="%d")
+kilos = col3.number_input("Kilos", min_value=0, step=1, format="%d")
+pounds = col4.number_input("Pounds", min_value=0, step=1, format="%d")
+equiv_lig_calc = col5.number_input("Equivalent Lug - (25 lb)", min_value=0, step=1, format="%d")
+
+kilos_calc = kilo_box * box_qnt
+pounds_cal = kilos_calc * 2.20462
+
+
+
 # Friendly hints
 ##st.caption(
 ##    "Notes: Size is typically the count per 25-lb lug (e.g., 48s). "
