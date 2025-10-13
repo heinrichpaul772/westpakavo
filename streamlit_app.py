@@ -11,7 +11,7 @@ st.markdown("Enter your inputs below. Calculated fields update when all required
 
 # --- Line 1: Bags & pieces ---
 col1, col2 = st.columns(2)
-num_bags = col1.number_input("# of Bags", min_value=0, step=1, format="%d")
+num_bags = col1.number_input("Number of Bags", min_value=0, step=1, format="%d")
 pieces_per_bag = col2.number_input("Pieces per bag", min_value=0, step=1, format="%d")
 
 total_pieces = num_bags * pieces_per_bag
