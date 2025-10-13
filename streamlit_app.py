@@ -35,7 +35,6 @@ st.number_input("Total Box Weight - Kilos (calculated)", value=float(round(total
 
 
 
-
 # --- Line 4 : Bulk Fill ----
 st.title("Bulk Fill")
 col5, col6 = st.columns(2)
