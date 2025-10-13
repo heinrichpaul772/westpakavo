@@ -3,8 +3,8 @@ import streamlit as st
 
 LB_TO_KG = 0.45359237
 
-st.set_page_config(page_title="Avocado Box Weight Calculator", layout="centered")
-st.title("Avocado Box Weight Calculator")
+st.set_page_config(page_title="WestPak Avocado Box Weight Calculator", layout="centered")
+st.title("WestPak Avocado Box Weight Calculator")
 
 st.markdown("Enter your inputs below. Calculated fields update when all required inputs are provided.")
 
@@ -33,8 +33,8 @@ st.number_input("Total Box Weight - Pounds (calculated)", value=float(round(tota
 st.number_input("Total Box Weight - Kilos (calculated)", value=float(round(total_box_kg, 3)), disabled=True)
 
 # Friendly hints
-st.caption(
-    "Notes: Size is typically the count per 25-lb lug (e.g., 48s). "
-    "Equivalent lug ratio = Lug Weight ÷ Size. "
-    "1 lb = 0.45359237 kg."
-)
+##st.caption(
+##    "Notes: Size is typically the count per 25-lb lug (e.g., 48s). "
+##    "Equivalent lug ratio = Lug Weight ÷ Size. "
+##    "1 lb = 0.45359237 kg."
+##)
