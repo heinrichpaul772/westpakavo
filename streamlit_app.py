@@ -36,7 +36,7 @@ st.number_input("Total Box Weight - Kilos (calculated)", value=float(round(total
 
 
 # --- Line 4 : Bulk Fill ----
-st.markdown("Bulk Fill")
+st.title("Bulk Fill")
 col5, col6 = st.columns(2)
 sizebulk = col5.number_input("Size", min_value=1, step=1, format="%d")
 piecesbulk = col6.number_input("Pieces", min_value=1, step=1, format="%d")
@@ -54,7 +54,7 @@ st.number_input("Total Box Weight (bulk fill) - Kilos (calculated)", value=float
 
 
 # --- Line 5 : Equivalent Lug Calculations
-st.markdown("Equivalent Lug Calculations. (Assuming sizes 28 - 70)")
+st.title("Equivalent Lug Calculations. (Assuming sizes 28 - 70)")
 col7, col8 = st.columns(2)
 
 kilo_box = col7.number_input("Kilo Box", min_value=0, step=1, format="%d")
