@@ -59,7 +59,7 @@ st.number_input("Total Box Weight (bulk fill) - Pounds (calculated)", value=floa
 st.number_input("Total Box Weight (bulk fill) - Kilos (calculated)", value=float(round(total_box_kg_bulk, 3)), disabled=True)
 
 
-# --- Line 5 : Equivalent Lug Calculations
+# --- Line 5 : Equivalent Lug Calculations ---
 st.title("Equivalent Lug Calculations. (Assuming sizes 28 - 70)")
 col7, col8 = st.columns(2)
 
