@@ -33,8 +33,6 @@ total_box_kg = total_box_lb * LB_TO_KG
 st.number_input("Total Box Weight - Pounds (calculated)", value=float(round(total_box_lb, 3)), disabled=True)
 st.number_input("Total Box Weight - Kilos (calculated)", value=float(round(total_box_kg, 3)), disabled=True)
 
-
-
 # --- Line 4 : Bulk Fill ----
 st.title("Bulk Fill")
 col5, col6 = st.columns(2)
@@ -49,7 +47,6 @@ total_box_kg_bulk = total_box_lb_bulk * LB_TO_KG
 
 st.number_input("Total Box Weight (bulk fill) - Pounds (calculated)", value=float(round(total_box_lb_bulk, 3)), disabled=True)
 st.number_input("Total Box Weight (bulk fill) - Kilos (calculated)", value=float(round(total_box_kg_bulk, 3)), disabled=True)
-
 
 
 # --- Line 5 : Equivalent Lug Calculations
