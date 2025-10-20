@@ -25,16 +25,8 @@ num_bags = col1.number_input("Number of Bags", min_value=0, step=1, format="%d")
 pieces_per_bag = col2.number_input("Pieces per bag", min_value=0, step=1, format="%d")
 
 total_pieces = num_bags * pieces_per_bag
-st.text_input("Total pieces (calculated)", value=str(total_pieces), key="readonly_field")
-st.markdown("""
-    <style>
-    div[data-testid="stTextInput"] input {
-        pointer-events: none;
-        background-color: white;
-        color: black;
-    }
-    </style>
-""", unsafe_allow_html=True)
+st.text_input("Total pieces (calculated)", value=str(total_pieces), disabled=True)
+
 
 
 # --- Line 2: Lug & size ---
@@ -45,15 +37,7 @@ size = col4.number_input("Size (e.g., 48, 60, 72, 84)", min_value=48, step=1, fo
 # Equivalent lug ratio = equiv_lug_lb / size
 equiv_lug_ratio = (equiv_lug_lb / size) if size else 0.0
 st.text_input("Equivalent lug ratio", value=f"{equiv_lug_ratio:.6f}", disabled=True)
-st.markdown("""
-    <style>
-    div[data-testid="stTextInput"] input {
-        pointer-events: none;
-        background-color: white;
-        color: black;
-    }
-    </style>
-""", unsafe_allow_html=True)
+
 
 # --- Line 3: Totals ---
 total_box_lb = total_pieces * equiv_lug_ratio
@@ -62,7 +46,7 @@ total_box_kg = total_box_lb * LB_TO_KG
 st.number_input("Total Box Weight - Pounds (calculated)", value=float(round(total_box_lb, 3)), disabled=True)
 st.markdown("""
     <style>
-    div[data-testid="stnumber_input"] input {
+    div[data-testid="stNumberInput"] input {
         pointer-events: none;
         background-color: white;
         color: black;
