@@ -5,16 +5,7 @@ LB_TO_KG = 0.45359237
 
 st.set_page_config(page_title="WestPak Avocado Box Weight Calculator", layout="centered")
 st.image("WPA.png", width =250)
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: #FFFFF;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+
 st.title("WestPak Avocado Box Weight Calculator")
 
 st.markdown("Enter your inputs below. Calculated fields update when all required inputs are provided.")
@@ -54,15 +45,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 st.number_input("Total Box Weight - Kilos (calculated)", value=float(round(total_box_kg, 3)), disabled=True)
-st.markdown("""
-    <style>
-    div[data-testid="stTextInput"] input {
-        pointer-events: none;
-        background-color: white;
-        color: black;
-    }
-    </style>
-""", unsafe_allow_html=True)
+
 
 # --- Line 4 : Bulk Fill ----
 st.title("Bulk Fill")
