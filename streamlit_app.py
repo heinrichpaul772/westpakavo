@@ -35,15 +35,6 @@ total_box_lb = total_pieces * equiv_lug_ratio
 total_box_kg = total_box_lb * LB_TO_KG
 
 st.number_input("Total Box Weight - Pounds (calculated)", value=float(round(total_box_lb, 3)), disabled=True)
-st.markdown("""
-    <style>
-    div[data-testid="stNumberInput"] input {
-        pointer-events: none;
-        background-color: white;
-        color: black;
-    }
-    </style>
-""", unsafe_allow_html=True)
 st.number_input("Total Box Weight - Kilos (calculated)", value=float(round(total_box_kg, 3)), disabled=True)
 
 
