@@ -23,7 +23,7 @@ st.text_input("Total pieces (calculated)", value=str(total_pieces), disabled=Tru
 # --- Line 2: Lug & size ---
 col3, col4 = st.columns(2)
 equiv_lug_lb = col3.number_input("Equivalent Lug Weight in Pounds. Use 22 for 84's otherwise 25 for sizes 28-70", min_value=0.0, value=25.0, step=0.5)
-size = col4.number_input("Size (e.g., 48, 60, 72, 84)", min_value=48, step=1, format="%d")
+size = col4.number_input("Size (e.g., 48, 60, 72, 84)", min_value=0, step=1, format="%d")
 
 # Equivalent lug ratio = equiv_lug_lb / size
 equiv_lug_ratio = (equiv_lug_lb / size) if size else 0.0
@@ -41,11 +41,12 @@ st.number_input("Total Box Weight - Kilos (calculated)", value=float(round(total
 # --- Line 4 : Bulk Fill ----
 st.title("Bulk Fill")
 col5, col6 = st.columns(2)
-sizebulk = col5.number_input("Size", min_value=36, step=1, format="%d")
-piecesbulk = col6.number_input("Pieces", min_value=36, step=1, format="%d")
+sizebulk = col5.number_input("Size", min_value=0, step=1, value=36, format="%d")
+piecesbulk = col6.number_input("Pieces", min_value=0, step=1, value=10, format="%d")
+
 
 equiv_lug_ratio_bulk = (piecesbulk / sizebulk) if size else 0.0
-st.text_input("Equivalent lug ratio(bulk)", value=f"{equiv_lug_ratio_bulk:.6f}", disabled=True)
+st.text_input("Equivalent lug ratio(bulk)", value=f"{equiv_lug_ratio_bulk:.6f}", disabled=False)
 
 total_box_lb_bulk = equiv_lug_lb * equiv_lug_ratio_bulk
 total_box_kg_bulk = total_box_lb_bulk * LB_TO_KG
