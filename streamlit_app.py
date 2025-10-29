@@ -23,7 +23,7 @@ st.text_input("Total pieces (calculated)", value=str(total_pieces), disabled=Tru
 # --- Line 2: Lug & size ---
 col3, col4 = st.columns(2)
 equiv_lug_lb = col3.number_input("Equivalent Lug Weight in Pounds. Use 22 for 84's otherwise 25 for sizes 28-70", min_value=0.0, value=25.0, step=0.5)
-size = col4.number_input("Size (e.g., 48, 60, 72, 84)", min_value=0, step=1, format="%d")
+size = col4.number_input("Size (e.g., 48, 60, 72, 84)", min_value=0, step=1, value=36, format="%d")
 
 # Equivalent lug ratio = equiv_lug_lb / size
 equiv_lug_ratio = (equiv_lug_lb / size) if size else 0.0
