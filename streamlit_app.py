@@ -4,7 +4,12 @@ import streamlit as st
 LB_TO_KG = 0.45359237
 
 st.set_page_config(page_title="WestPak Avocado Box Weight Calculator", layout="centered")
-st.image("WPA.png", width =250)
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    st.image("WPA.png", width=250)
+
+
+
 
 st.title("WestPak Avocado Box Weight Calculator")
 
@@ -17,7 +22,6 @@ pieces_per_bag = col2.number_input("Pieces per bag", min_value=0, step=1, format
 
 total_pieces = num_bags * pieces_per_bag
 st.text_input("Total pieces (calculated)", value=str(total_pieces), disabled=True)
-
 
 
 # --- Line 2: Lug & size ---
