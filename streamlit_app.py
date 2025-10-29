@@ -59,8 +59,9 @@ st.number_input("Total Box Weight (bulk fill) - Kilos (calculated)", value=float
 st.title("Equivalent Lug Calculations. (Assuming sizes 28 - 70)")
 col7, col8 = st.columns(2)
 
-kilo_box = col7.number_input("Kilo Box", min_value=0, step=1, value=1, format="%.2f")
-box_qnt = col8.number_input("Box Quantity", min_value=0, step=1, value=1, format="%.2f")
+kilo_box = col7.number_input("Kilo Box", min_value=0.0, step=1.0, value=1.0, format="%.2f")
+box_qnt = col8.number_input("Box Quantity", min_value=0.0, step=1.0, value=1.0, format="%.2f")
+
 
 kilos_calc = kilo_box * box_qnt
 pounds_cal = kilos_calc * 2.20462
